@@ -1,2 +1,25 @@
-<p>login works!</p>
-<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card" style="width: 400px;">
+        <div class="card-body">
+            <h1 class="h3 mb-3 fw-normal text-center">Entrar no Sistema</h1>
+
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                    <label for="floatingPassword">Senha</label>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Lembre-me</label>
+                </div>
+
+                <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="onLogin()">Sign in</button>
+            </form>
+        </div>
+    </div>
+</div>

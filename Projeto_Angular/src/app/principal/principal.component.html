@@ -1,1 +1,32 @@
-<p>principal works!</p>
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title" id="offcanvas-basic-title">Atualizar Perfil</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="offcanvas-body">
+		<form>
+			<div class="mb-3">
+				<label for="dateOfBirth">Data de Nascimento</label>
+				<div class="input-group">
+					<input
+						id="dateOfBirth"
+						class="form-control"
+						placeholder="yyyy-mm-dd"
+						name="dp"
+						ngbDatepicker
+						#dp="ngbDatepicker"
+					/>
+					<button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
+				</div>
+			</div>
+		</form>
+		<div class="text-end">
+			<button type="button" class="btn btn-outline-secondary" (click)="offcanvas.close('Save click')">Salvar</button>
+		</div>
+	</div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary mt-3 ms-3" (click)="open(content)">Atualizar</button>
+
+
+
